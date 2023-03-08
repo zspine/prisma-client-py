@@ -48,7 +48,7 @@
 
       if True:
         data['id'] = '983293asdsad'
-        data['invalid'] = True  # E: TypedDict "PostCreateInput" has no key "invalid"  [typeddict-item]
+        data['invalid'] = True  # E: TypedDict "PostCreateInput" has no key "invalid"  [typeddict-unknown-key]
 
       await client.post.create(data)
 
