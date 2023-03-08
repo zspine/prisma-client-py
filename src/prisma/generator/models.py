@@ -536,7 +536,7 @@ class Config(BaseSettings):
     ) -> Optional[Module]:
         try:
             return Module(
-                spec=value  # pyright: ignore[reportGeneralTypeIssues]
+                spec=value,  # type: ignore[arg-type]
             )
         except ValueError:
             if value is None:

@@ -24,7 +24,7 @@ def test_recursive_type_depth() -> None:
 
     with pytest.raises(ValidationError) as exc:
         Config(
-            recursive_type_depth='a'  # pyright: ignore[reportGeneralTypeIssues]
+            recursive_type_depth='a',  # type: ignore[arg-type]
         )
 
     assert exc.match('value is not a valid integer')
